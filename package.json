@@ -1,0 +1,66 @@
+{
+  "name": "electron-boilerplate",
+  "version": "0.1.0",
+  "description": "Electron Boilerplate with enabled contextIsolation and sandboxing.", 
+  "keywords": [
+    "electron",
+    "boilerplate",
+    "contextIsolation",
+    "sandboxing",
+    "enabled",
+    "secure"
+  ],
+  "homepage": "https://github.com/f0xb17/electron-boilerplate#readme",
+  "bugs": {
+    "url": "https://github.com/f0xb17/electron-boilerplate/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/f0xb17/electron-boilerplate.git"
+  },
+  "license": "Apache-2.0",
+  "author": {
+    "name": "f0xb17",
+    "email": "test@test.com"
+  },
+  "type": "commonjs",
+  "main": "./src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "electron": "^34.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.f0xb17.electron-boilerplate",
+    "productName": "Electron-Boilerplate",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*"
+    ],
+    "win": {
+      "icon": "./build/icon.png"
+    },
+    "mac": {
+      "icon": "./build/icon.icns"
+    }, 
+    "linux": {
+      "target": [
+        "AppImage",
+        "pacman",
+        "deb"
+      ],
+      "icon": "./build/icon.png",
+      "desktop": {
+        "Name": "Electron-Boilerplate",
+        "Icon": "./build/icon.png"
+      }
+    }
+  }
+}
