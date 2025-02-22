@@ -25,7 +25,6 @@ $ npm run dist -- --win
 $ npm run dist -- --mac
 ```
 Special options must be set for macOS: [Building Guide](https://www.electron.build/mac)
-Wont work without!
 
 ### Linux
 ```bash
