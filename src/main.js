@@ -1,5 +1,5 @@
 const { app, BrowserWindow } = require('electron')
-const path = require('path')
+const path = require('node:path')
 
 /**
  * Initializes and opens a new browser window with defined size and loads the 
@@ -9,7 +9,10 @@ const createMainWindow = () => {
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
-    icon: path.join(__dirname, './../ressources/icon/icon.png')
+    icon: path.join(__dirname, './../ressources/icon/icon.png'),
+    webPreferences: {
+      preload: path.join(__dirname, 'preload.js')
+    }
   })
   mainWindow.loadFile('./src/assets/index.html')
 }
