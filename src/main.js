@@ -1,4 +1,5 @@
 const { app, BrowserWindow } = require('electron')
+const path = require('path')
 
 /**
  * Initializes and opens a new browser window with defined size and loads the 
@@ -7,7 +8,8 @@ const { app, BrowserWindow } = require('electron')
 const createMainWindow = () => {
   const mainWindow = new BrowserWindow({
     width: 800,
-    height: 600
+    height: 600,
+    icon: path.join(__dirname, './../ressources/icon/icon.png')
   })
   mainWindow.loadFile('./src/assets/index.html')
 }

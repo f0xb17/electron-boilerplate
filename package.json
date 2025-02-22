@@ -20,7 +20,7 @@
   },
   "license": "Apache-2.0",
   "author": {
-    "name": "f0xb17",
+    "name": "appId",
     "email": "test@test.com"
   },
   "type": "commonjs",
@@ -38,6 +38,7 @@
   "build": {
     "appId": "com.f0xb17.electron-boilerplate",
     "productName": "Electron-Boilerplate",
+    "icon": "./ressources/icon/icon.png",
     "directories": {
       "output": "dist"
     },
@@ -45,22 +46,21 @@
       "**/*"
     ],
     "win": {
-      "icon": "./build/icon.png"
+      "icon": "./ressources/icon/icon.png"
     },
     "mac": {
-      "icon": "./build/icon.icns"
+      "icon": "./ressources/icon/icon.icns"
     }, 
     "linux": {
       "target": [
-        "AppImage",
-        "pacman",
-        "deb"
+        "dir",
+        "AppImage"
       ],
-      "icon": "./build/icon.png",
       "desktop": {
-        "Name": "Electron-Boilerplate",
-        "Icon": "./build/icon.png"
-      }
+        "StartupWMClass": "electron-boilerplate"
+      },
+      "category": "utility",
+      "icon": "./ressources/icon/"
     }
   }
 }
