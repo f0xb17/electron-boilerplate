@@ -1,4 +1,4 @@
-# Electron Boilerplate
+# Electron Boilerplate with Tailwind CSS
 
 ## Configure
 Open ``package.json`` and change the settings according to your project. 
@@ -44,3 +44,10 @@ For build targets refer to: [Linux Build Targets](https://www.electron.build/lin
     "icon": "./ressources/icon/"
   }
 ```
+
+## Tailwind CSS
+```bash
+$ npx @tailwindcss/cli -i ./src/assets/styles/main.css -o ./src/output/main.css --watch
+```
+
+Don't forget to generate a new Tailwind CSS file after creating your UI.
