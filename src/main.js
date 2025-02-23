@@ -7,13 +7,21 @@ const path = require('node:path')
  */
 const createMainWindow = () => {
   const mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1024,
+    height: 768,
     icon: path.join(__dirname, './../ressources/icon/icon.png'),
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     }
   })
+
+  /**
+   * This option controls the ribbon above the app. 
+   * The following option would never display the ribbon.
+   */
+  mainWindow.setMenuBarVisibility(false) // set this to true to always show the ribbon
+  mainWindow.setAutoHideMenuBar(false) // set this to 'true' to show the ribbon with alt
+
   mainWindow.loadFile('./src/assets/index.html')
 }
 

@@ -1,7 +1,7 @@
 {
   "name": "electron-boilerplate",
   "version": "0.1.0",
-  "description": "Electron Boilerplate with enabled contextIsolation and sandboxing.", 
+  "description": "Electron Boilerplate with enabled contextIsolation and sandboxing.",
   "keywords": [
     "electron",
     "boilerplate",
@@ -50,7 +50,7 @@
     },
     "mac": {
       "icon": "./ressources/icon/icon.icns"
-    }, 
+    },
     "linux": {
       "target": [
         "dir",
@@ -62,5 +62,9 @@
       "category": "utility",
       "icon": "./ressources/icon/"
     }
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.8",
+    "tailwindcss": "^4.0.8"
   }
 }
