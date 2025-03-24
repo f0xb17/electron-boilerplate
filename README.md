@@ -1,5 +1,9 @@
 # Electron Boilerplate with Tailwind CSS
 
+## Information
+
+Needs to be updated to the lastest version!
+
 ## Configure
 Open ``package.json`` and change the settings according to your project. 
 
